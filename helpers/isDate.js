@@ -1,10 +1,6 @@
 const moment = require("moment")
 
-const isDate = (value, rest ) => {
-
-   const { start, end } = rest.req.body
-
-   // se podria validar que la fecha end NO sea menor a la fecha start
+const isDate = ( value ) => {
 
    if( !value ) return false
    

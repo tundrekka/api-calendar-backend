@@ -1,3 +1,6 @@
+/*
+   host + /api/events
+*/
 const express = require('express');
 const { getEvents, createEvent, updateEvent, deleteEvent } = require('../controllers/events-controller');
 const { validarJWT } = require('../middlewares/validar-jwt');
@@ -7,7 +10,6 @@ const { isDate } = require('../helpers/isDate');
 
 const router = express.Router()
 
-// todas las rutas tienen que pasar por validacion del token
 router.use( validarJWT )
 
 // Get events

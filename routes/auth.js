@@ -1,5 +1,4 @@
 /*
-   Rutas de usuarios / Auth
    host + /api/auth
 */
 const express = require('express')
@@ -24,7 +23,7 @@ router.post(
 router.post(
    '/', 
    [ // middlewares
-      check('email', 'eamil is invalid').isEmail(),
+      check('email', 'email is invalid').isEmail(),
       check('password', 'Password must be at least 6 characters').isLength({min: 6}),
       fieldValidator
    ],
